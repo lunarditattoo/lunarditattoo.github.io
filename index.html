@@ -13,8 +13,8 @@
     --ink-2:#1e1a18;
     --paper:#ECE4D8;
     --paper-dim:#c9c0b3;
-    --oxblood:#7c1f2b;
-    --oxblood-bright:#a02c3a;
+    --gold:#8a6d1f;
+    --gold-bright:#cfa93c;
     --line: rgba(236,228,216,0.14);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -73,14 +73,14 @@
     border-bottom:1px solid var(--line);
   }
   .hero-mark{
-    position:absolute; top:14vh; right:6vw;
+    position:absolute; top:14vh; left:6vw;
     font-family:'Cormorant Garamond'; font-style:italic; font-size:0.95rem;
     color:var(--paper-dim); letter-spacing:0.04em;
-    max-width:220px; text-align:right; line-height:1.5;
+    max-width:220px; text-align:left; line-height:1.5;
   }
   .hero-eyebrow{
     font-size:0.78rem; letter-spacing:0.3em; text-transform:uppercase;
-    color:var(--oxblood-bright); margin-bottom:1.4rem;
+    color:var(--gold-bright); margin-bottom:1.4rem;
   }
   h1.hero-title{
     font-size:clamp(3.2rem, 11vw, 8.5rem);
@@ -120,16 +120,15 @@
     border-bottom:1px solid var(--line);
   }
   .section-head{
-    display:flex; justify-content:space-between; align-items:flex-end;
-    gap:2rem; margin-bottom:5rem; flex-wrap:wrap;
-  }
-  .section-num{
-    font-family:'Anton'; font-size:0.8rem; color:var(--oxblood-bright); letter-spacing:0.1em;
+    display:flex; flex-direction:column; align-items:flex-start;
+    text-align:left;
+    margin-bottom:5rem;
   }
   .section-title{
     font-size:clamp(2.2rem, 5vw, 3.6rem);
     text-transform:uppercase;
     line-height:0.95;
+    text-align:left;
   }
 
   /* ARTIST */
@@ -137,8 +136,8 @@
     display:grid; grid-template-columns: 1fr 1.2fr; gap:5vw; align-items:start;
   }
   .artist-badge{
-    display:inline-block; border:1px solid var(--oxblood-bright);
-    color:var(--oxblood-bright);
+    display:inline-block; border:1px solid var(--gold-bright);
+    color:var(--gold-bright);
     padding:0.35rem 0.9rem; font-size:0.72rem; letter-spacing:0.15em;
     text-transform:uppercase; margin-bottom:1.6rem; border-radius:2px;
   }
@@ -168,7 +167,7 @@
   .value-card{
     background:var(--ink); padding:3rem 2.2rem;
   }
-  .value-card .serif{ font-size:2.4rem; color:var(--oxblood-bright); display:block; margin-bottom:1.2rem;}
+  .value-card .serif{ font-size:2.4rem; color:var(--gold-bright); display:block; margin-bottom:1.2rem;}
   .value-card h3{ font-size:1.05rem; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.9rem;}
   .value-card p{ color:var(--paper-dim); font-size:0.95rem; line-height:1.65; font-weight:300;}
 
@@ -202,7 +201,7 @@
     color:var(--paper-dim); font-size:1.05rem; margin-bottom:2.6rem; max-width:60ch;
   }
   .insta-link{
-    color:var(--oxblood-bright); text-decoration:none; font-weight:500;
+    color:var(--gold-bright); text-decoration:none; font-weight:500;
   }
   .insta-link:hover{ text-decoration:underline; }
   .insta-grid{
@@ -227,7 +226,7 @@
   }
   .faq-item summary::-webkit-details-marker{ display:none; }
   .faq-item summary::after{
-    content:"+"; font-family:'Anton'; font-size:1.4rem; color:var(--oxblood-bright);
+    content:"+"; font-family:'Anton'; font-size:1.4rem; color:var(--gold-bright);
     flex-shrink:0; transition:transform 0.3s ease;
   }
   .faq-item[open] summary::after{ content:"–"; }
@@ -281,7 +280,7 @@
     font-size:0.65rem; color:var(--paper-dim);
   }
   .feedback-quote{ font-family:'Cormorant Garamond'; font-style:italic; font-size:1.15rem; line-height:1.55; color:var(--paper); }
-  .feedback-name{ font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--oxblood-bright); }
+  .feedback-name{ font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold-bright); }
 
   /* FOOTER MAP */
   footer{ padding:0; flex-direction:column; }
@@ -315,18 +314,17 @@
   .cta p{ color:var(--paper-dim); max-width:50ch; margin:0 auto 2.6rem; line-height:1.7;}
   .cta-btn{
     display:inline-flex; align-items:center; gap:0.7rem;
-    border:1px solid var(--paper); padding:1rem 2.2rem;
+    border:1px solid #25D366; padding:1rem 2.2rem;
     border-radius:999px;
+    background:#25D366; color:#0b1a0f;
     text-decoration:none; text-transform:uppercase; font-size:0.8rem; letter-spacing:0.15em;
+    font-weight:500;
     transition:background 0.3s ease, color 0.3s ease, transform 0.2s ease;
   }
-  .cta-btn:hover{ background:var(--paper); color:var(--ink); transform:translateY(-2px);}
+  .cta-btn:hover{ background:#1fb956; border-color:#1fb956; color:#0b1a0f; transform:translateY(-2px);}
   .hero-cta{
     margin-top:2.4rem; align-self:flex-start;
-    border-color:var(--oxblood-bright); color:var(--paper);
-    background:var(--oxblood-bright);
   }
-  .hero-cta:hover{ background:var(--paper); border-color:var(--paper); color:var(--ink); transform:translateY(-2px);}
   .hero-cta-note{
     margin-top:0.7rem; font-size:0.75rem; color:var(--paper-dim); letter-spacing:0.04em;
   }
@@ -376,9 +374,6 @@
 </header>
 
 <section id="artista">
-  <div class="section-head">
-    <span class="section-num">01 — O Artista</span>
-  </div>
   <div class="artist-grid">
     <div class="artist-frame reveal">[ foto do artista em ação ]</div>
     <div>
@@ -396,7 +391,6 @@
 
 <section id="estudio">
   <div class="section-head">
-    <span class="section-num">02 — O Estúdio</span>
     <h2 class="section-title">Como trabalhamos</h2>
   </div>
   <div class="values">
@@ -425,7 +419,6 @@
 
 <section id="portfolio">
   <div class="section-head">
-    <span class="section-num">03 — Trabalhos</span>
     <h2 class="section-title">Portfólio</h2>
   </div>
   <div class="portfolio-grid" id="portGrid">
@@ -440,7 +433,6 @@
 
 <section id="coberturas">
   <div class="section-head">
-    <span class="section-num">04 — Antes &amp; Depois</span>
     <h2 class="section-title">Coberturas</h2>
   </div>
   <div class="cover-grid">
@@ -477,7 +469,6 @@
 
 <section id="instagram">
   <div class="section-head">
-    <span class="section-num">05 — Redes</span>
     <h2 class="section-title">No Instagram</h2>
   </div>
   <p class="insta-lead">Trabalhos recentes, bastidores e disponibilidade de agenda saem primeiro por lá. <a class="insta-link" href="https://instagram.com/[SEU_INSTAGRAM]" target="_blank" rel="noopener">@[seu_instagram] →</a></p>
@@ -497,7 +488,6 @@
 
 <section id="feedbacks">
   <div class="section-head">
-    <span class="section-num">06 — Depoimentos</span>
     <h2 class="section-title">Quem já tatuou</h2>
   </div>
   <div class="feedback-track">
@@ -531,7 +521,6 @@
 
 <section id="faq">
   <div class="section-head">
-    <span class="section-num">07 — Dúvidas</span>
     <h2 class="section-title">Perguntas frequentes</h2>
   </div>
   <div class="faq-list">
@@ -559,7 +548,6 @@
 </section>
 
 <section class="cta" id="contato">
-  <span class="section-num">08 — Vamos conversar</span>
   <h2 class="section-title">Sua ideia,<br>nossa técnica</h2>
   <p>Conte a ideia que você quer levar na pele. Respondemos com orçamento, disponibilidade e o próximo passo do processo.</p>
   <a class="cta-btn" href="https://wa.me/[SEU_NUMERO]" target="_blank" rel="noopener">Fale com o tatuador →</a>
